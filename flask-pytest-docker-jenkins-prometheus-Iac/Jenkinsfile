@@ -1,0 +1,37 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Build') {
+      steps {
+        sh 'docker build -t <your-dockerhub-username>/<image-name>:<tag> .'
+      }
+    }
+
+    stage('Push to Docker Hub') {
+      steps {
+        withCredentials([usernamePassword(credentialsId: 'docker-hub-login', usernameVariable: 'DOCKER_HUB_USERNAME', passwordVariable: 'DOCKER_HUB_PASSWORD')]) {
+          sh "docker login -u ${DOCKER_HUB_USERNAME} -p ${DOCKER_HUB_PASSWORD}"
+          sh 'docker push <your-dockerhub-username>/<image-name>:<tag>'
+        }
+      }
+    }
+
+    stage('Deploy Production') {
+      when {
+        branch 'main'
+      }
+
+      steps {
+        withCredentials([sshUserPrivateKey(
+            credentialsId: 'production-server-ssh-key',
+            keyFileVariable: 'SSH_KEY_FILE',
+            passphraseVariable: 'SSH_PASSPHRASE',
+            usernameVariable: 'SSH_USER'
+        )]) {
+          sh 'chmod 600 $SSH_KEY_FILE && eval $(ssh-agent) && ssh-add $SSH_KEY_FILE && ssh -o StrictHostKeyChecking=no $SSH_USER@production-server "docker-compose pull && docker-compose up -d"'
+        }
+      }
+    }
+  }
+}

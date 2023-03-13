@@ -1,0 +1,8 @@
+ALERT HighCPUUsage
+  IF avg(cpu_usage) > 80
+  FOR 5m
+  LABELS { severity="critical" }
+  ANNOTATIONS {
+    summary = "High CPU usage detected",
+    description = "The average CPU usage has been above 80% for the past 5 minutes."
+  }
