@@ -1,18 +1,32 @@
 # devops-projects
 
-# Prerequisites
-#
-- JDK 1.8 or later
-- Maven 3 or later
-- MySQL 5.6 or later
+[Flask-pytest-docker-jenkins-prometheus-Iac](https://github.com/mehrdadbn9/devops-projects/tree/main/flask-pytest-docker-jenkins-prometheus-Iac)
+
+[Node-Docker-CI](https://github.com/mehrdadbn9/devops-projects/tree/main/NodeDockerCI)
+
+[Automated_local_setup_multi_tier_app](https://github.com/mehrdadbn9/devops-projects/tree/main/Automated_local_setup_multi_tier_app_project)
+
+[Localization](https://github.com/mehrdadbn9/devops-projects/tree/main/Localization_project)
 
 # Technologies 
+- Docker
+- vagrant
+- Jenkins
+- Flask
 - Spring MVC
 - Spring Security
 - Spring Data JPA
 - Maven
 - JSP
 - MySQL
+
+# Prerequisites
+#
+- JDK 1.8 or later
+- Maven 3 or later
+- MySQL 5.6 or later
+
+
 # Database
 Here,we used Mysql DB 
 MSQL DB Installation Steps for Linux ubuntu 14.04:
