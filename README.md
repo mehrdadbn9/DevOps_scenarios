@@ -1,6 +1,7 @@
 # DevOps training tools, and scenarios for learning DevOps.
+This repo would have two mainly part of tools and scenarios
 
-# Table and Content
+# Table of Contents
 
 - [Environment Setup:](vagrant)
   - [vagrant and packer](vagrant/vagrant-and-packer.md)
@@ -43,15 +44,6 @@
   - [traefik](observability/traefik)
   - [zabbix stack scenario](observability/zabbix-stack)
 
-# In Progress Task:
-  - update readme file
-  - write readme on observability
-
-
-# Technologies 
-- Docker
-- vagrant
-
 
 # devops-projects
 
@@ -62,3 +54,7 @@
 [Automated_local_setup_multi_tier_app](https://github.com/mehrdadbn9/devops-projects/tree/main/Automated_local_setup_multi_tier_app_project)
 
 [Localization](https://github.com/mehrdadbn9/devops-projects/tree/main/Localization_project)
+
+# In Progress Task:
+  - update readme file
+  - write readme on observability
