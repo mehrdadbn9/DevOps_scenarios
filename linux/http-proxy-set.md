@@ -1,6 +1,7 @@
 # Set http proxy on linux
 
 change `PROXY_ADDRESS`, and `PROXY_PORT` then use it.
+## we use proxy for hidding our ip 
 
 ### Add http proxy on bash - temporary
 ```bash

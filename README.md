@@ -10,6 +10,7 @@ This repo would have two mainly part of tools and scenarios
 
 - [Linux:](linux)
   - [http proxy on linux](linux/http-proxy-set.md)
+  - [install wordpress  with backup](linux/install-wordpress.md)
   - [ssh config sample](linux/ssh_config)
   - [ssh banner sample](linux/ssh-banner)
 
